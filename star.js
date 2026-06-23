@@ -89,7 +89,7 @@ for (var i = 0; i < 520; i++) {
     new Star(random(0,w),random(0,h),10,10,0);
 }
 //动画星
-var startX = w/3.6,
+var startX = w/4,
 probability=0.457041870581837955410549211528,
 startY = h/4,
 sum=0;
@@ -114,11 +114,12 @@ for (var i=0;i<star.length;i++){
 	}
 }
 
-
+var startX = window.innerWidth * 0.8;   // 替代原来的 w/1.7
+var startY = window.innerHeight * 0.2;   // 替代原来的 startY
 //北斗星
 for (var i=0;i<polaris.length;i++){
 	for(var j=1;j<polaris[i].length;j++){
-		if(polaris[i][j]==="1")new Star(w/2+j*1.5,startY+i*1.5,20,0,0);
+		if(polaris[i][j]==="1")new Star(startX+j*1,startY+i*1,20,0,0);
 	}
 }
 
